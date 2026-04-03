@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarShowroom | Premium Auto Gallery</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .bg-primary {
+            background-color: #19394e;
+        }
+
+        .text-primary {
+            color: #19394e;
+        }
+
+        .bg-secondary {
+            background-color: #e53510;
+            transition: all 0.3s ease;
+        }
+
+        .button-bg-hover:hover {
+            background-color: #e53510;
+        }
+
+        .text-secondary {
+            color: #e53510;
+        }
+
+        .border-secondary {
+            border-color: #e53510;
+        }
+
+        /* Slick Custom Arrows */
+        .slick-prev:before,
+        .slick-next:before {
+            color: #e53510;
+            font-size: 30px;
+        }
+
+        .hero-slider .slick-dots {
+            bottom: 25px;
+        }
+
+        .hero-slider .slick-dots li button:before {
+            color: white;
+            opacity: 0.5;
+            font-size: 12px;
+        }
+
+        .hero-slider .slick-dots li.slick-active button:before {
+            color: #e53510;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="bg-primary text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold tracking-tighter">
+                Vibe<span class="text-secondary">Motors</span>
+            </a>
+            <div class="hidden md:flex space-x-6 font-medium">
+                <a href="#home" class="hover:text-secondary transition">Home</a>
+                <a href="#about" class="hover:text-secondary transition">About</a>
+                <a href="#services" class="hover:text-secondary transition">Services</a>
+                <a href="#buy" class="hover:text-secondary transition">Buy Cars</a>
+                <a href="#testimonials" class="hover:text-secondary transition">Testimonials</a>
+                <a href="#contact" class="hover:text-secondary transition">Contact</a>
+            </div>
+            <button class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-slider overflow-hidden">
+        <div>
+            <div class="relative h-[500px] md:h-[700px] bg-cover bg-center flex items-center"
+                style="background-image: linear-gradient(rgba(25, 57, 78, 0.6), rgba(25, 57, 78, 0.6)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1283&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                <div class="container mx-auto px-4 text-white">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Luxury Defined.</h1>
+                    <p class="text-lg md:text-xl mb-8 max-w-xl">Experience the ultimate collection of premium vehicles
+                        tailored for your lifestyle.</p>
+                    <a href="#buy"
+                        class="bg-secondary px-8 py-3 rounded-md font-bold hover:bg-opacity-90 transition">View
+                        Inventory</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="relative h-[500px] md:h-[700px] bg-cover bg-center flex items-center"
+                style="background-image: linear-gradient(rgba(25, 57, 78, 0.6), rgba(25, 57, 78, 0.6)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                <div class="container mx-auto px-4 text-white">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Unbeatable Performance.</h1>
+                    <p class="text-lg md:text-xl mb-8 max-w-xl">From sports cars to family SUVs, find your perfect match
+                        today.</p>
+                    <a href="#contact"
+                        class="bg-secondary px-8 py-3 rounded-md font-bold hover:bg-opacity-90 transition">Book Test
+                        Drive</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="About Us" class="rounded-lg shadow-2xl">
+                </div>
+                <div>
+                    <h4 class="text-secondary font-bold uppercase tracking-widest mb-2">Our Story</h4>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Redefining the Car Buying Experience
+                    </h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        With over two decades of excellence, <strong>VibeMotors</strong> has been the trusted
+                        destination for automotive enthusiasts. We don't just sell cars; we provide a legacy of
+                        performance, safety, and
+                        unparalleled customer service.
+                    </p>
+                    <ul class="space-y-3">
+                        <li><i class="fas fa-check text-secondary mr-2"></i> Certified Pre-Owned Vehicles</li>
+                        <li><i class="fas fa-check text-secondary mr-2"></i> Transparent Pricing & Financing</li>
+                        <li><i class="fas fa-check text-secondary mr-2"></i> Expert Technical Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h4 class="text-secondary font-bold uppercase tracking-widest mb-2">What We Offer</h4>
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-12">Our Premium Services</h2>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md hover:-translate-y-2 transition duration-300">
+                    <div class="text-4xl text-secondary mb-4"><i class="fas fa-car-side"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Sales</h3>
+                    <p class="text-gray-500 text-sm">Wide range of new and certified pre-owned luxury vehicles.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:-translate-y-2 transition duration-300">
+                    <div class="text-4xl text-secondary mb-4"><i class="fas fa-tools"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Maintenance</h3>
+                    <p class="text-gray-500 text-sm">Full-service repair and routine maintenance by certified pros.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:-translate-y-2 transition duration-300">
+                    <div class="text-4xl text-secondary mb-4"><i class="fas fa-hand-holding-dollar"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Financing</h3>
+                    <p class="text-gray-500 text-sm">Tailored financial plans with low-interest rates available.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:-translate-y-2 transition duration-300">
+                    <div class="text-4xl text-secondary mb-4"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Insurance</h3>
+                    <p class="text-gray-500 text-sm">Comprehensive coverage plans to protect your investment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="buy" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Our Latest Inventory</h2>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <script>
+                    for (let i = 1; i <= 8; i++) {
+                        document.write(`
+                            <div class="border rounded-lg overflow-hidden group">
+                                <div class="relative overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D+${i}" alt="Car" class="w-full group-hover:scale-110 transition duration-500">
+                                    <a href="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D+${i}" data-fancybox="gallery" class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                                    </a>
+                                </div>
+                                <div class="p-4">
+                                    <h3 class="font-bold text-lg">2026 Sports Edition v${i}</h3>
+                                    <p class="text-gray-500 text-sm mb-4">Hybrid, Automatic, 500HP</p>
+                                    <button onclick="openModal()" class="button-bg-hover w-full py-2 border border-secondary text-secondary font-bold rounded hover:text-white transition uppercase text-xs">Enquiry Now</button>
+                                </div>
+                            </div>
+                        `);
+                    }
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h4 class="text-secondary font-bold uppercase tracking-widest mb-2">Testimonials</h4>
+                <h2 class="text-3xl md:text-4xl font-bold">What Our Clients Say</h2>
+            </div>
+
+            <div class="testimonial-slider">
+                <div class="px-4">
+                    <div class="bg-white text-gray-800 p-8 rounded-lg relative italic">
+                        <i class="fas fa-quote-left text-secondary text-3xl mb-4"></i>
+                        <p class="mb-6">Best experience I've ever had at a dealership. The staff was professional and
+                            the car is absolute perfection!</p>
+                        <h5 class="font-bold not-italic">- John Doe</h5>
+                    </div>
+                </div>
+                <div class="px-4">
+                    <div class="bg-white text-gray-800 p-8 rounded-lg relative italic">
+                        <i class="fas fa-quote-left text-secondary text-3xl mb-4"></i>
+                        <p class="mb-6">Transparency and quality. I got a great trade-in value and a smooth financing
+                            process. Highly recommended.</p>
+                        <h5 class="font-bold not-italic">- Sarah Jenkins</h5>
+                    </div>
+                </div>
+                <div class="px-4">
+                    <div class="bg-white text-gray-800 p-8 rounded-lg relative italic">
+                        <i class="fas fa-quote-left text-secondary text-3xl mb-4"></i>
+                        <p class="mb-6">The maintenance service is top-notch. They treat every car like it's their own.
+                            Truly a premium showroom.</p>
+                        <h5 class="font-bold not-italic">- Michael Chen</h5>
+                    </div>
+                </div>
+                <div class="px-4">
+                    <div class="bg-white text-gray-800 p-8 rounded-lg relative italic">
+                        <i class="fas fa-quote-left text-secondary text-3xl mb-4"></i>
+                        <p class="mb-6">Found my dream car within an hour. The collection is diverse and every car is in
+                            showroom condition.</p>
+                        <h5 class="font-bold not-italic">- Emma Watson</h5>
+                    </div>
+                </div>
+                <div class="px-4">
+                    <div class="bg-white text-gray-800 p-8 rounded-lg relative italic">
+                        <i class="fas fa-quote-left text-secondary text-3xl mb-4"></i>
+                        <p class="mb-6">The insurance team helped me navigate everything easily. Stress-free buying at
+                            its finest!</p>
+                        <h5 class="font-bold not-italic">- Robert Fox</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h4 class="text-secondary font-bold uppercase tracking-widest mb-2">Get In Touch</h4>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary">Contact Us</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-4">Contact Details</h3>
+                        <p class="flex items-center mb-2"><i class="fas fa-map-marker-alt text-secondary w-8"></i> 123
+                            Luxury Lane, Auto District</p>
+                        <p class="flex items-center mb-2"><i class="fas fa-phone text-secondary w-8"></i> +1 234 567 890
+                        </p>
+                        <p class="flex items-center"><i class="fas fa-envelope text-secondary w-8"></i>
+                            info@vibemotors.com</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#"
+                                class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-secondary transition"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="#"
+                                class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-secondary transition"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="#"
+                                class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-secondary transition"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="#"
+                                class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-secondary transition"><i
+                                    class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-2 bg-white p-8 rounded-lg shadow-lg">
+                    <form class="grid md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Name"
+                            class="w-full border p-3 rounded focus:border-secondary outline-none">
+                        <input type="email" placeholder="Email"
+                            class="w-full border p-3 rounded focus:border-secondary outline-none">
+                        <input type="tel" placeholder="Phone"
+                            class="w-full border p-3 rounded focus:border-secondary outline-none">
+                        <input type="text" placeholder="Subject"
+                            class="w-full border p-3 rounded focus:border-secondary outline-none">
+                        <textarea placeholder="Message" rows="4"
+                            class="w-full border p-3 rounded focus:border-secondary outline-none md:col-span-2"></textarea>
+                        <button type="submit"
+                            class="bg-secondary text-white font-bold py-3 px-8 rounded hover:bg-opacity-90 transition md:w-max">Submit
+                            Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary py-6 border-t border-gray-700 text-center text-gray-400 text-sm">
+        <p>&copy; 2026 VibeMotors. All Rights Reserved.</p>
+    </footer>
+
+    <div id="enquiryModal" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-md w-full p-8 relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-2xl text-gray-500">&times;</button>
+            <h2 class="text-2xl font-bold text-primary mb-4">Vehicle Enquiry</h2>
+            <form class="space-y-4">
+                <input type="text" placeholder="Your Name" class="w-full border p-2 rounded">
+                <input type="email" placeholder="Email Address" class="w-full border p-2 rounded">
+                <input type="tel" placeholder="Phone Number" class="w-full border p-2 rounded">
+                <textarea placeholder="Ask us about this car..." class="w-full border p-2 rounded h-24"></textarea>
+                <button type="submit" class="w-full bg-secondary text-white font-bold py-3 rounded uppercase">Send
+                    Request</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Hero Slider
+            $('.hero-slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 800,
+                fade: true,
+                cssEase: 'linear',
+                autoplay: true,
+                arrows: false
+            });
+
+            // Testimonial Slider
+            $('.testimonial-slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 640,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+
+            // Initialize Fancybox
+            Fancybox.bind("[data-fancybox]", {});
+        });
+
+        // Modal Functions
+        function openModal() {
+            document.getElementById('enquiryModal').classList.remove('hidden');
+            document.getElementById('enquiryModal').classList.add('flex');
+        }
+        function closeModal() {
+            document.getElementById('enquiryModal').classList.add('hidden');
+            document.getElementById('enquiryModal').classList.remove('flex');
+        }
+    </script>
+</body>
+
+</html>
