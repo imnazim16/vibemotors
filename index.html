@@ -91,7 +91,16 @@
                 <a href="#testimonials" class="hover:text-secondary transition">Testimonials</a>
                 <a href="#contact" class="hover:text-secondary transition">Contact</a>
             </div>
-            <button class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+            <button onclick="toggleMenu()" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+            <div id="mobile-menu"
+                class="md:hidden bg-primary border-t p-4 flex flex-col space-y-4 text-center absolute top-full left-0 w-full">
+                <a href="#home" onclick="toggleMenu()" class="hover:text-secondary transition">Home</a>
+                <a href="#about" onclick="toggleMenu()" class="hover:text-secondary transition">About</a>
+                <a href="#services" onclick="toggleMenu()" class="hover:text-secondary transition">Services</a>
+                <a href="#buy" onclick="toggleMenu()" class="hover:text-secondary transition">Buy Cars</a>
+                <a href="#testimonials" onclick="toggleMenu()" class="hover:text-secondary transition">Testimonials</a>
+                <a href="#contact" onclick="toggleMenu()" class="hover:text-secondary transition">Contact</a>
+            </div>
         </div>
     </nav>
 
@@ -358,6 +367,7 @@
             // Testimonial Slider
             $('.testimonial-slider').slick({
                 dots: true,
+                arrows: false,
                 infinite: true,
                 speed: 300,
                 slidesToShow: 3,
@@ -391,6 +401,11 @@
         function closeModal() {
             document.getElementById('enquiryModal').classList.add('hidden');
             document.getElementById('enquiryModal').classList.remove('flex');
+        }
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
         }
     </script>
 </body>
